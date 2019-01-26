@@ -72,7 +72,8 @@ def can_find_using_where_clause_and_be_sorted
     if m.release_date > 2002
       a << m.title
     end
-    a 
+  end 
+    a
 end
 
 def can_be_found_updated_and_saved
