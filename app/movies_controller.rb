@@ -72,6 +72,10 @@ def can_find_using_where_clause_and_be_sorted
   FROM movies
   WHERE release_date > 2002
   SQL 
+  DB[:conn].execute(sql, name).map do |row|
+    self.new_from_db(row)
+    end 
+  end 
 end
 
 def can_be_found_updated_and_saved
