@@ -69,6 +69,7 @@ def can_find_using_where_clause_and_be_sorted
   # release date descending
   a = []
   Movie.find do |m|
+    binding.pry
     if m.release_date < 2002
     a << m.title
     end 
